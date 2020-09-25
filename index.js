@@ -19,7 +19,7 @@ client.on("message", async function (message) {
   if (message.author.bot) return;
 
   const wordsToCheck = message.content.split(' ');
-  if (wordsToCheck.find((word) => redCardList.includes(word))) {
+  if (wordsToCheck.find((word) => redCardList.includes(word.toLowerCase()))) {
     await message.react("🟥");
   }
 });
