@@ -5,7 +5,7 @@ const app = express();
 const client = new discord.Client();
 const port = 8080;
 const redCardList = ['shit', 'fuck', 'bitch', 'bitching',
-  'bitches', 'fucks', 'fucking', 'fleshlight']
+  'bitches', 'fucks', 'fucking', 'fleshlight', 'tech debt']
 
 app.get('/', (req, res) => {
   res.send('pong!');
