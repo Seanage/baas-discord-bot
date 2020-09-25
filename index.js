@@ -13,5 +13,6 @@ client.on("message", async function (message) {
     await message.react("🟥");
   }
 });
-client.login(config.BOT_TOKEN);
+console.log(process.env.WEBSITE_NODE_DEFAULT_VERSION);
+client.login(process.env.DISCORD_BOT_TOKEN); //TODO: POC: secure this better?
 console.log('bot started');
