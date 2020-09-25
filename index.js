@@ -13,5 +13,5 @@ client.on("message", async function (message) {
     await message.react("🟥");
   }
 });
-
 client.login(config.BOT_TOKEN);
+console.log('bot started');
