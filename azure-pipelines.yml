@@ -24,6 +24,12 @@ steps:
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)/node_modules'
     targetFolder: './.ts_output/node_modules'
+  displayName: copy node_modules
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: '$(Build.SourcesDirectory)/package.json'
+    targetFolder: './.ts_output/'
+  displayName: 'copy package.json'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(System.DefaultWorkingDirectory)/.ts_output'
