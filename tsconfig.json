@@ -1,0 +1,28 @@
+  {
+    "compilerOptions": {
+      "strict": true,
+      "allowJs": true,
+      "target": "ES2018",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "noUnusedLocals": false,
+      "noUnusedParameters": false,
+      "sourceMap": true,
+      "outDir": "./.ts_output",
+      "resolveJsonModule": true,
+      "lib": [
+        "ES2018"
+      ],
+      "types": [
+        "node",
+        "mocha"
+      ]
+    },
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }

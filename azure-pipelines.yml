@@ -18,9 +18,15 @@ steps:
 - script: |
     npm install
     npm run build
+    npm prune --production
   displayName: 'npm install and build'
-  
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: '$(Build.SourcesDirectory)/node_modules'
+    targetFolder: './.ts_output/node_modules'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)'
+    PathtoPublish: '$(System.DefaultWorkingDirectory)/.ts_output'
+    TargetPath: './'
+    parallel: true
   displayName: 'publish artifacts'
