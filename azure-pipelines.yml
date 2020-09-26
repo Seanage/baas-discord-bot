@@ -22,7 +22,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)/node_modules'
-    targetFolder: './ts_output/node_modules'
+    targetFolder: './.ts_output/node_modules'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(System.DefaultWorkingDirectory)/.ts_output'
