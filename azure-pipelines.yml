@@ -27,8 +27,9 @@ steps:
   displayName: copy node_modules
 - task: CopyFiles@2
   inputs:
-    sourceFolder: '$(Build.SourcesDirectory)/package.json'
+    sourceFolder: '$(Build.SourcesDirectory)/'
     targetFolder: './.ts_output/'
+    Contents: 'package.json'
   displayName: 'copy package.json'
 - task: PublishBuildArtifacts@1
   inputs:
