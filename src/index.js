@@ -19,7 +19,7 @@ app.listen(port, () => {
 client.on("message", async function (message) {
     if (message.author.bot)
         return;
-    const wordsToCheck = message.content.split(' ');
+    const wordsToCheck = message.content.split(' ').toLowerCase();
     if (wordsToCheck.find((word) => redCardList.includes(word))) {
         await message.react("🟥");
     }
