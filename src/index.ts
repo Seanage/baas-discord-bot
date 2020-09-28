@@ -20,9 +20,12 @@ client.on('message', async (message) => {
     return;
   }
 
-  const wordsToCheck = message.content.split(' ');
+  const wordsToCheck = message.content.toLowerCase().split(' ');
   if (wordsToCheck.find((word) => redCardWordList.includes(word))) {
     await message.react('🟥');
+  }
+  if (wordsToCheck.includes('less')) {
+    message.reply('*fewer');
   }
 });
 client.login(process.env.DISCORD_BOT_TOKEN);
