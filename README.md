@@ -1,5 +1,7 @@
 # baas-discord-bot
 
+This is exactly like it is named. A discord bot that runs on an azure app service for the sake of harassing the BaaS (or former BaaS) members of Lumen. 
+
 ## Adding rules
 
 To add your own rules do the following below. follow the pattern already present and don't be a chief.
