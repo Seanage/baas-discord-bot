@@ -1,2 +1,3 @@
 coverage/*
 .ts_output/*
+.eslintrc.js
